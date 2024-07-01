@@ -15,6 +15,24 @@ const Main = () => {
 
     const [selectedTab, setSelectedTab] = useContext(Context);
 
+    const [isFocused, setIsFocused] = useState(false);
+    const [inputValue, setInputValue] = useState('');
+
+    const handleFocus = () => {
+        setIsFocused(true);
+      };
+    
+      const handleBlur = () => {
+        if (inputValue.trim() === '') {
+          setIsFocused(false);
+        }
+      };
+    
+      const handleChange = (e) => {
+        setInputValue(e.target.value);
+      };
+    
+
     return (
         <div className='main-section containerBank'>
             <div className='flex flex-col lg:flex-row lg:justify-center h-full'>
@@ -75,8 +93,8 @@ const Main = () => {
                             </div>
                             <div className='flex items-center justify-between'>
                                 <div className='w-full relative'>
-                                    <label for="login" className='inputLabel text-[#666666] transition-all'>Identyfikator</label>
-                                    <input id="login" type='text' className='inputLogin outline-none w-full border-[#C8C8C8] hover:border-[#99CC00] focus:border-[#99CC00] border'/>
+                                    <label className={`inputLabel text-[#666666] transition-all ${isFocused || inputValue ? 'focused' : ''}`}>Identyfikator</label>
+                                    <input type='text' onFocus={handleFocus} onBlur={handleBlur} onChange={handleChange} className='inputLogin outline-none w-full border-[#C8C8C8] hover:border-[#99CC00] focus:border-[#99CC00] border'/>
                                 </div>
                                 <button>
                                     <div className='ml-2 infoBtn rounded-xl transition-all'>

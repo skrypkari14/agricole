@@ -67,7 +67,7 @@
   position: absolute;
 }
 
-.inputLabel:has(+ .inputLogin:focus) {
+.inputLabel.focused{
   line-height: 1.125rem;
   font-size: 0.75rem;
 	top: 0.5rem;
