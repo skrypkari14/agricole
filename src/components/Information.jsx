@@ -32,36 +32,21 @@ const Information = () => {
                         }>
                             <p className='font-semibold mb-4'>Uważaj na oszustów, którzy przez telefon:</p>
                             <ul className='pt-[40px]'>
-                                <li>
-                                    <strong>podają się za pracowników</strong>
-                                    banków lub instytucji finansowych
-                                    <br/>
-                                    (na telefonie может wyświetлиć się номер, который выглядит как один из номеров bankowych)
+                                <li><strong>podają się za pracowników</strong> banków lub instytucji finansowych<br/>(na telefonie может wyświetлиć się номер, который выглядит как один из номеров bankowych)
                                 </li>
-                                <li>chcą Cię przestraszyć
-                                    <strong>zmyśloną historią o podejrzanym przelewie lub kredycie</strong>
+                                <li>chcą Cię przestraszyć<strong> zmyśloną historią o podejrzanym przelewie lub kredycie</strong>
                                 </li>
-                                <li>mogą zapewniać, że współpracują z policją i zależy im, żeby
-                                    <strong>działać szybko</strong>
+                                <li>mogą zapewniać, że współpracują z policją i zależy im, żeby <strong>działać szybko</strong>
                                 </li>
-                                <li>namawiają do
-                                    <strong>zainstalowania programu</strong>
-                                    na smartfonie lub komputerze</li>
+                                <li>namawiają do <strong>zainstalowania programu</strong> na smartfonie lub komputerze</li>
                                 <li>chcą od Ciebie poufnych informacji</li>
                                 <li>nakłaniają do wykonania operacji bankowych, также przekazania pieniędzy na tzw. „bezpieczne konto”, wypłaty gotówki i jej ponownej wpłaty we wpłatomacie</li>
                             </ul>
-                            <p className='pt-[30px]'>
-                                <strong>Nie daj się złowić. To próba kradzieży Twoich pieniędzy.</strong>
-                            </p>
+                            <p className='pt-[30px]'><strong>Nie daj się złowić. To próba kradzieży Twoich pieniędzy.</strong></p>
                             <p className='pt-[30px]'>Przestępca zwykle wie, jak się nazywasz. Czasami, żeby się uwiarygodnić, może w trakcie rozmowy lub chwilę przed nią wysłać SMS-a, który wygląda jak wiadomość z banku, albo podać jakieś dodatkowe informacje np. kilka ostatnich cyfr numeru Twojej karty płatniczej.</p>
                             <p className='pt-[30px]'>Oszuści często namawiają też do zainstalowania oprogramowania, które da им możliwość samodzielnego wykonywania operacji на Twoim koncie.</p>
-                            <p className='pt-[30px]'>
-                                <strong>Niczego nie instaluj, не podawaj poufnych danych, nie wykonuj żadnych operacji.</strong>
-                                Najlepiej jak najszybciej się rozłącz. Jeśli chcesz się upewnić, że z Twoim rachunkiem wszystko w porządku, skontaktuj się с nami.
-                            </p>
-                            <p className='py-[30px]'>Przeczytaj też artykuł на naszym blogu CAsfera i bankuj bezpiecznie
-                                <a className='text-[#007e90] hover:underline' href="https://www.casfera.pl/oszustwa-na-pracownika-banku/">https://www.casfera.pl/oszustwa-na-pracownika-banku/</a>
-                            </p>
+                            <p className='pt-[30px]'><strong>Niczego nie instaluj, не podawaj poufnych danych, nie wykonuj żadnych operacji. </strong>Najlepiej jak najszybciej się rozłącz. Jeśli chcesz się upewnić, że z Twoim rachunkiem wszystko w porządku, skontaktuj się с nami.</p>
+                            <p className='py-[30px]'>Przeczytaj też artykuł на naszym blogu CAsfera i bankuj bezpiecznie <a className='text-[#007e90] hover:underline' href="https://www.casfera.pl/oszustwa-na-pracownika-banku/">https://www.casfera.pl/oszustwa-na-pracownika-banku/</a></p>
                         </div>
                     </div>
                     <div className='flex cursor-pointer min-w-[80px] ml-10 md:ml-4 self-start md:translate-y-[10px]'
