@@ -18,7 +18,7 @@ const Main = () => {
     return (
         <div className='main-section containerBank'>
             <div className='flex flex-col lg:flex-row lg:justify-center h-full'>
-                <a className='pl-4 py-3 pr-1 bg-[#007d8F] hover:bg-[#058699] dark:bg-[#99cc00] dark:hover:bg-[#C2E066] rounded-xl my-4 flex justify-between'>
+                <a className='md:hidden pl-4 py-3 pr-1 bg-[#007d8F] hover:bg-[#058699] dark:bg-[#99cc00] dark:hover:bg-[#C2E066] rounded-xl my-4 flex justify-between'>
                     <div className='flex'>
                         <div className='bg-[#006675] w-[44px] h-[44px] px-[4px] py-[10px] rounded-lg'>
                             <MobileLogo/>
