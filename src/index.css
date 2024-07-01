@@ -196,7 +196,7 @@
 }
 
 .collaps.open {
-  max-height: 1000px;
+  max-height: 10000px;
 }
 
 @keyframes circleSmall-1 {
