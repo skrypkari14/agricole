@@ -12,7 +12,7 @@ const Header = () => {
             selectedTab === 1 ? (
                 <LogoDefault/>) : (
                 <div className='flex items-center'><LogoWhite/>
-                    <SecondLogo/></div>
+                    <div className='hidden sm:block'><SecondLogo/></div></div>
             )
         }
             <div className='flex items-center gap-4 text-sm hidden md:block'>
