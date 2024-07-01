@@ -12,7 +12,7 @@ const LoginFooter = () => {
             <div className='bg-[#006675] dark:bg-[#333F52] pb-4 containerBank pt-4'>
                 <div className='p-5 bg-[#007D8F] dark:bg-[#434E61] rounded-xl'>
                     <h4 className='text-white font-semibold text-xl'>Centrum Bezpieczeństwa</h4>
-                    <div className='flex items-center justify-between gap-5 mt-5'>
+                    <div className='flex items-center justify-between gap-5 mt-5 flex-col md:flex-row'>
                         <a href='#' className='footerCard bg-[#006675] dark:bg-[#3A4455] dark:hover:bg-[#4D576A] p-4 flex w-full flex-nowrap rounded-xl hover:bg-[#058699] items-center'>
                             <img src={safe}
                                 alt='safe'/>
@@ -30,24 +30,22 @@ const LoginFooter = () => {
                         </a>
                     </div>
                 </div>
-                <div className='flex flex-wrap items-start -mx-3'>
-                    <div className='w-1/2 max-w-1/2 px-3 mt-7'>
-                        <div className='bg-[#007485] dark:bg-[#404A5C] w-full h-full p-6 rounded-xl flex items-center gap-4'>
-                            <div className='flex flex-col justify-between h-[220px]'>
-                                <div>
-                                    <h4 className='font-semibold text-white text-xl mb-2'>Placówki i bankomaty</h4>
-                                    <p className='text-sm text-white'>Znajdź swoją najbliższą placówkę, bankomat i wpłatomat</p>
-                                </div>
-                                <div className='max-w-[160px]'>
-                                    <a href='#' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>Wyszukaj na mapie</a>
-                                </div>
+                <div className='flex flex-col lg:flex-row flex-wrap items-start -mx-3'>
+                    <div className='w-full lg:w-1/2 lg:max-w-1/2 px-3 mt-7'>
+                        <div className='bg-[#007485] dark:bg-[#404A5C] w-full h-full p-6 rounded-xl grid grid-cols-2 firstCard gap-8'>
+                            <div className='col-span-2'>
+                                <h4 className='font-semibold text-white text-xl mb-2'>Placówki i bankomaty</h4>
+                                <p className='text-sm text-white'>Znajdź swoją najbliższą placówkę, bankomat i wpłatomat</p>
                             </div>
                             <img src={map}
-                                className='rounded-xl'/>
+                                className='rounded-xl col-span-2 cardImg'/>
+                            <div className='max-w-[160px] col-span-2'>
+                                <a href='#' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>Wyszukaj na mapie</a>
+                            </div>
                         </div>
                     </div>
-                    <div className='w-1/2 max-w-1/2 px-3 mt-7'>
-                        <div className='bg-[#007485] dark:bg-[#404A5C] w-full h-full p-6 rounded-xl relative'>
+                    <div className='w-full lg:w-1/2 lg:max-w-1/2 px-3 mt-7'>
+                        <div className='bg-[#007485] dark:bg-[#404A5C] w-full h-full p-6 rounded-xl relative secondCard'>
                             <h4 className='font-semibold text-white text-xl mb-2'>Infolinia</h4>
                             <h4 className='text-white font-semibold text-[1.75rem] mb-4'>19 019</h4>
                             <p className='text-white text-sm'>Połączenia zagraniczne</p>

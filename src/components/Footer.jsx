@@ -10,7 +10,7 @@ const Footer = () => {
             </div>
             <div className='pt-[22px] border-b border-[#187380] dark:border-[#455061]'>
                 <div className='flex'>
-                    <ul class="block columns-4">
+                    <ul class="block columns-1 lg:columns-4">
                         <li className='mr-[100px] text-sm text-white hover:underline pb-[22px] font-light'>
                             <a href="javascript:void(0);">
                                 <span>Bezpieczeństwo</span>
