@@ -93,7 +93,7 @@ const Main = () => {
                     </div>
                     {
                     selectedTab === 1 ? (
-                        <div className='w-1/2 hidden lg:block flex items-center'>
+                        <div className='w-1/2 hidden lg:flex items-center'>
                             <div className='grow-0'>
                                 <h2 className='text-black text-2xl font-semibold mb-2'>Zmiana w logowaniu do serwisu CA24 eBank</h2>
                                 <p className='text-sm text-[#666] font-normal'>
@@ -108,7 +108,7 @@ const Main = () => {
                             </div>
                         </div>
                     ) : (
-                        <div className='w-1/2 hidden lg:block  flex items-center'>
+                        <div className='w-1/2 hidden lg:flex items-center'>
                             <div className='grow-0'>
                                 <h2 className='text-white text-2xl font-semibold mb-2'>Zarządzaj swoją firmą. Po swojemu.</h2>
                                 <p className='text-sm text-white font-normal'>
