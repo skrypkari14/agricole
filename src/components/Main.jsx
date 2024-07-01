@@ -83,9 +83,7 @@ const Main = () => {
                             <div className='grow-0'>
                                 <h2 className='text-black text-2xl font-semibold mb-2'>Zmiana w logowaniu do serwisu CA24 eBank</h2>
                                 <p className='text-sm text-[#666] font-normal'>
-                                    Dodaliśmy nowy element bezpieczeństwa i weryfikacji podczas logowania do serwisu CA24 eBank. Przeczytaj więcej o przeglądarkach zaufanych na
-                                    <a href='https://www.credit-agricole.pl/zaufane-przegladarki' className='text-[#007e90]'>
-                                        www.credit-agricole.pl/zaufane-przegladarki</a>
+                                    Dodaliśmy nowy element bezpieczeństwa i weryfikacji podczas logowania do serwisu CA24 eBank. Przeczytaj więcej o przeglądarkach zaufanych na <a href='https://www.credit-agricole.pl/zaufane-przegladarki' className='text-[#007e90]'>www.credit-agricole.pl/zaufane-przegladarki</a>
                                 </p>
                             </div>
                             <div className='shrink-0 grow-0'>
@@ -98,7 +96,7 @@ const Main = () => {
                         <div className='w-1/2 flex items-center'>
                             <div className='grow-0'>
                                 <h2 className='text-white text-2xl font-semibold mb-2'>Zarządzaj swoją firmą. Po swojemu.</h2>
-                                <p className='text-sm text-white font-normal mb-4'>
+                                <p className='text-sm text-white font-normal'>
                                     Wygodne rozliczania z parterami za granicą. Karty walutowe EUR i USD. Ty opiekujesz się klientami, my pomagamy w formalnościach.
                                 </p>
                                 <a className='text-[#9c0] text-sm font-semibold'>Dowiedz się więcej o nowym sposobie logowania</a>
