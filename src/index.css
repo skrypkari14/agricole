@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+  font-family: "Open Sans", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.containerBank{
+  padding-left: calc((100vw - 1238px) / 2);
+  padding-right: calc((100vw - 1238px) / 2);
+}
+
+.main-section{
+  height: max(100vh - 173px, 600px);
+}
+
+.userIcon{
+  stroke: #007d8F;
+  fill: none;
+}
+
+.selectableTab{
+  flex: 1 1 0;
+  
+}
+
+.selectedTab{
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.keyboardBtn:hover{
+  background: rgba(0, 125, 143, 0.1);;
+}
+
+.infoBtn:hover{
+  background: rgba(0, 125, 143, 0.1);
+}
+
+.inputLogin {
+  padding: 1.5625rem 0.9375rem 0.4375rem 0.9375rem;
+  border-radius: 0.75rem;
+}
+
+.inputLabel {
+  left: 1rem;
+  top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  position: absolute;
+}
+
+.inputLabel:has(+ .inputLogin:focus) {
+  line-height: 1.125rem;
+  font-size: 0.75rem;
+	top: 0.5rem;
+}
+
+.footerCard{
+  max-width: calc(100vw - 8rem);
+}
+
+.footerBtn{
+  max-width: calc(100vw - 8rem);
+}
+
+.loginFooter{
+  border-bottom: 1px solid #0A6C7A;
+}
+
+.circleBig{
+  position: absolute;
+  top: calc(50% - 290px / 2);
+  left: calc(50% - 290px / 2);
+  width: 290px;
+  height: 290px;
+  border: 2px solid #3a4455;
+  border-radius: 50%;
+  background-color: #4d576a;
+}
+
+.circleSmall-1{
+  position: absolute;
+  top: calc(50% - 26px / 2);
+  left: calc(50% - 26px / 2);
+  width: 26px;
+  height: 26px;
+  border: 2px solid #3a4455;
+  border-radius: 50%;
+  background-color: #3a4455;
+  animation: circleSmall-1 10s infinite alternate ease-in-out;
+}
+
+.circleSmall-2{
+  position: absolute;
+  top: calc(50% - 16px / 2);
+  left: calc(50% - 16px / 2);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #3a4455;
+  border-radius: 50%;
+  background-color: #4d576a;
+  animation: circleSmall-2 10s infinite alternate ease-in-out;
+}
+
+.circleSmall-3{
+  position: absolute;
+  top: calc(50% - 10px / 2);
+  left: calc(50% - 10px / 2);
+  width: 10px;
+  height: 10px;
+  border: 2px solid #3a4455;
+  border-radius: 50%;
+  background-color: #3a4455;
+  animation: circleSmall-3 10s infinite alternate ease-in-out;
+}
+
+.circleSmall-green-1{
+  position: absolute;
+  top: calc(50% - 42px / 2);
+  left: calc(50% - 42px / 2);
+  width: 42px;
+  height: 42px;
+  border: 2px solid #99cc00;
+  border-radius: 50%;
+  background-color: #99cc00;
+  transform: translate(-110px, 127px);
+}
+
+.circleSmall-green-2{
+  position: absolute;
+  top: calc(50% - 74px / 2);
+  left: calc(50% - 74px / 2);
+  width: 74px;
+  height: 74px;
+  border: 2px solid #99cc00;
+  border-radius: 50%;
+  background-color: #99cc00;
+  transform: translate(-80px, -140px);
+}
+
+.circleSmall-green-big{
+  position: absolute;
+  top: calc(50% - 216px / 2);
+  left: calc(50% - 216px / 2);
+  width: 216px;
+  height: 216px;
+  border: 2px solid #99cc00;
+  border-radius: 50%;
+  background-color: #99cc00;
+}
+
+.circleSmall-green-3{
+  position: absolute;
+  top: calc(50% - 94px / 2);
+  left: calc(50% - 94px / 2);
+  width: 94px;
+  height: 94px;
+  border: 2px solid #99cc00;
+  border-radius: 50%;
+  background-color: #99cc00;
+  transform: translate(70px, -75px);
+}
+
+.ecoCase{
+  animation: ecoCase 7s infinite alternate ease-in-out;
+}
+
+@keyframes circleSmall-1 {
+  0% {
+    transform: rotate(-90deg) translateX(145px) rotate(90deg);
+  }
+  100% {
+    transform: rotate(-150deg) translateX(145px) rotate(150deg);
+  }
+}
+
+@keyframes circleSmall-2 {
+  0% {
+    transform: rotate(-150deg) translateX(145px) rotate(150deg);
+  }
+  100% {
+    transform: rotate(-20deg) translateX(145px) rotate(20deg);
+  }
+}
+
+@keyframes circleSmall-3 {
+  0% {
+    transform: rotate(45deg) translateX(145px) rotate(-45deg);
+  }
+  100% {
+    transform: rotate(100deg) translateX(145px) rotate(-100deg);
+  }
+}
+
+@keyframes ecoCase {
+  0% {
+    transform: translate(0px, -5px);
+  }
+  100% {
+    transform: translate(0px, 30px);
+  }
 }
