@@ -81,7 +81,7 @@ const Information = () => {
                 </div>
             </div>
             <div className='bg-white'>
-                <div className='bg-[#006675] dark:bg-[#333F52] rounded-t-xl px-7 py-2 flex flex-col md:flex-row items-center justify-between gap-4'>
+                <div className='bg-[#006675] dark:bg-[#333F52] rounded-t-xl py-4 px-6 md:px-7 md:py-2 flex flex-col md:flex-row items-center justify-between gap-4'>
                     <div className='gridContainer overflow-hidden'>
                         <span className='h-6 min-w-6 bg-[#99cc00] text-black text-center rounded-full text-sm'>
                             !
