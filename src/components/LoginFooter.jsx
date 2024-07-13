@@ -40,7 +40,7 @@ const LoginFooter = () => {
                             <img src={map}
                                 className='rounded-xl col-span-2 cardImg'/>
                             <div className='max-w-[160px] col-span-2'>
-                                <a href='#' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>Wyszukaj na mapie</a>
+                                <a href='https://www.credit-agricole.pl/kontakt/placowki-i-bankomaty' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>Wyszukaj na mapie</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@ const LoginFooter = () => {
                             <p className='text-white text-sm'>Połączenia zagraniczne</p>
                             <h4 className='font-semibold text-white text-xl mb-4'>+48 71 35 49 009</h4>
                             <div className='max-w-[160px]'>
-                                <a href='#' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>
+                                <a href='https://www.credit-agricole.pl/kontakt/czat' className='flex footerBtn items-center justify-center bg-[#99cc00] rounded-xl text-sm font-semibold min-w-9 min-h-9 hover:bg-[#C2E066] transition-all'>
                                     <Chat/>
                                     <span>Rozpocznij czat</span>
                                 </a>
